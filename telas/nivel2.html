@@ -8,12 +8,12 @@
 	<script src="../block/msg/js/en.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script type="text/javascript" src="../jquery/java.js"></script>
+	<script type="text/javascript" src="../jquery/java.js"></script>
 </head>
 <body class="body">
 <header>
 <div>
-<button class="bu"><i class="fa fa-bars">  menu   </i></button>
+<button class="btn-menu"><i class="fa fa-bars">menu</i></button>
 </div>
 <div class="basico">Nivel basico</div>
 <nav class="menu">
@@ -46,29 +46,34 @@
                         </ul>
 </nav>
 </header>
-<script type="text/javascript">
-    $(".btn-menu").click(function(){
-        $(".menu").show();
-    });
-    $(".btn-close").click(function(){
-        $(".menu").hide();
-    });
+
+<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
+<script>
+			/*Para aparecer o menu*/
+			$(".btn-menu").click(function(){
+			$(".menu").show();
+		});
+			/* para fechar o menu*/	
+			$(".btn-close").click(function(){
+			$(".menu").hide();
+
+		});
 </script>
 <div class="div">
 <div class="close">comandos
 	<div class="lixo">
-		<img src="lixeira.svg">
+		<img src="../imagens/lixeira.svg">
 	</div>
 </div>
 </div>
 <div class="audio" >
-		<img src="audio.svg">
+		<img src="../imagens/audio.svg">
 	</div>
 	<div class="ajuda">
-		<img src="ajuda.svg">
+		<img src="../imagens/ajuda.svg">
 	</div>
 	<div id="d1" class="play" onclick="document.getElementById('d1').onclick();">
-		<img src="play.svg">
+		<img src="../imagens/play.svg">
 	</div>
 <div class="d">
                     <div class="e">synapse</div>

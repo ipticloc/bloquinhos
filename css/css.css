@@ -57,7 +57,7 @@ label{
         height: 100px;
         background-color: black;
         color:white;
-        font-size: 75px;
+        font-size: 85px;
         border-radius: 5%;
         font-style:Impact, fantasy;
         font-weight:bold; 
@@ -188,7 +188,7 @@ td{
         border:solid black;
         background-color:black;
         color:white;
-        font-size: 27px;
+        font-size: 30px;
         border-top-right-radius: 0px;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 10px;
@@ -219,39 +219,34 @@ td{
         margin-left: -19px;
 }
 .btn-menu{
-        width: 90px;
-        height: 56px;
+        width: 140px;
+        height: 50px;
         float: left;
         cursor: pointer;
         color: white;
         background-color: black;
         transform: rotate(-90deg);
-        margin-left: -40px;
-        margin-top: 100px;
+        margin-left: -53px;
+        margin-top: 45px;
         text-align: center;
         border-color: black;
+        box-shadow: 0px 0px 0px 0px ; 
+        font-size: 25px;
 }
 .cabecalho{
     width: 100%;
     float: left;
-    padding: 3% 4%;
-}
-.bu{
-        transform: rotate(-90deg);
-        font-size: 22px;
-        height: 45px;
-        float: left;
-        margin-left: -65px;
-        color: white;
-        background-color: black;
-        box-shadow: 0px 0px 0px 0px ; 
-        border-color: black;
-        margin-top: 55px;
+    padding: 3% 4%;        
 }
 .btn-close{
         font-size: 3em;
         cursor: pointer;
         float: left;
+        color: white;
+
+}
+.itens{
+    color: white;
 
 }
 .menu ul{
@@ -272,7 +267,7 @@ td{
 }
 .body
 {
-        background-image: url("../telas/fundo.svg");
+        background-image: url("../imagens/fundo.svg");
         background-color: #fff;
 }
 .carrinho
@@ -306,13 +301,13 @@ td{
 .basico{
         transform: rotate(-90deg);
         float: left;
-        margin-left: -140px;
+        margin-left: -130px;
         height: 28px;
         color: black;
         background-color: white;
         box-shadow: 0px 0px 2px 2px;
         border-radius: 5px;
-        margin-top: 198px;
+        margin-top: 182px;
         width: 110px;
         font-size: 20px;
 }
