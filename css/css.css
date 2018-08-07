@@ -308,4 +308,58 @@ td{
         margin-top: 182px;
         width: 110px;
         font-size: 20px;
-} 
+}
+.btn{
+            font-family: arial;
+            font-size: 14px;
+            text-transform: uppercase;
+            font-weight: 700;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+
+        }
+
+        .b-green{
+                background:#00FFFF;
+                color: #00FFFF;
+                box-shadow: 0 5px 0 #006000;    
+
+        }
+        .button-type {
+            background-color:#00EEEE;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: left;
+            float: left; ;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            margin-left: 61%; 
+
+        }
+        .h1center{
+            text-align: center;
+        }
+       
+        .box{
+    width:600px;
+    height:450px;
+    background-color:white;
+    border-radius: 10px;
+
+
+    }
+    .sombraclara{
+   width: 200px;
+   padding: 30px;
+   background-color: #999;
+   color: #fff;
+   
+   box-shadow: 2px 2px 2px #ffc;
+   -webkit-box-shadow: 2px 2px 2px #ffc;
+   -moz-box-shadow: 2px 2px 2px #ffc;
+}
