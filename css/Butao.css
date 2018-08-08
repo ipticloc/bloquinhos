@@ -1,0 +1,48 @@
+/*
+	 CSS-Tricks Example
+	 by Chris Coyier
+	 http://css-tricks.com
+*/
+
+.body2 {
+  background: #393939;
+  color: white;
+  font: 14px Helvetica, sans-serif;
+}
+
+#page-wrap {
+  width: 500px;
+  margin: 100px auto;
+}
+
+h1 {
+  font: 20px Georgia, Serif;
+  margin: 0 0 10px 0;
+}
+
+input[type=text] {
+  float: left;
+  width: 30px;
+  font: bold 20px Helvetica, sans-serif;
+  padding: 3px 0 0 0;
+  text-align: center;
+}
+
+.button {
+  margin: 0 0 0 5px;
+  text-indent: -9999px;
+  cursor: pointer;
+  width: 29px;
+  height: 29px;
+  float: left;
+  text-align: center;
+  background: url(buttons.png) no-repeat;
+}
+.dec {
+  background-position: 0 -29px;
+}
+
+.buttons {
+  padding: 20px 0 0 140px;
+}
+
