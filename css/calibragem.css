@@ -9,7 +9,7 @@ button{
         background-color: #5cc;
         border: none;
         color: white;
-        padding: 5px 40px;
+        padding: 0px 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -40,13 +40,13 @@ select{
 .fiel{
         border-radius: 10%;
         width: 25%;
-        height: 320px !important;
+        height: 350 px !important;
         border-spacing: 10%;
         background-color: white;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
         border:none;
         float: left;
-        margin-left: 540px;
+        margin-left: 530px;
 
     }
 .cor {
@@ -322,5 +322,5 @@ td{
   background-color: #8ce196;
 }
 .switch--shadow:checked + label:after {
-  transform: translateX(40px);
+  transform: translateX(60px);
 }
