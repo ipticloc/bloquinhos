@@ -327,7 +327,7 @@ td{
 
         }
         .button-type {
-            background-color:#00EEEE;
+            background-color:#33cccc;
             border: none;
             color: white;
             padding: 15px 32px;
@@ -341,10 +341,9 @@ td{
             margin-left: 61%; 
 
         }
-        .h1center{
-            text-align: center;
+        .tex{
+            line-height: 50px;
         }
-       
         .box{
     width:600px;
     height:450px;
@@ -353,16 +352,6 @@ td{
     margin-top: 150px;
 
     }
-    .sombraclara{
-   width: 200px;
-   padding: 30px;
-   background-color: #999;
-   color: #fff;
-   
-   box-shadow: 2px 2px 2px #ffc;
-   -webkit-box-shadow: 2px 2px 2px #ffc;
-   -moz-box-shadow: 2px 2px 2px #ffc;
-}
 .sb{
     width: 490px;
     height: 100px;
@@ -377,13 +366,13 @@ td{
     border-bottom-right-radius: 10px;
     border-top-left-radius: 17px; 
     border-bottom-left-radius: 15px;
-    margin-left: 80px;
+    margin-left: 100px;
     margin-top: 400px;
     margin-top: -140px !important;
     padding: 1px;
     box-shadow: -11px 12px 0px 0px #2f2f2f;
     height: 100px;
-    margin-left: 70px;
+    margin-left: 40px;
     width: 540px;
     border-top-left-radius: 23px;
     border-bottom-right-radius: 20px;
