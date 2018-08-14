@@ -343,6 +343,7 @@ td{
         }
         .tex{
             line-height: 50px;
+            font-family: serif;
         }
         .box{
     width:600px;
