@@ -13,17 +13,17 @@
 <body class="body">
 <header>
 <div>
-<button class="btn-menu"><i class="fa fa-bars">menu</i></button>
+<button class="btn-menu"><img src="../imagens/menu.svg" class="me">menu</button>
 </div>
 <div class="basico">Nivel basico</div>
-<nav class="menu">
-<a class="btn-close">x</a>
+<div class="line">
+<nav class="menu"><a class="btn-close"><div class="circle">X</div></a>
     <ul>
     <div >
                         <center>
-                            <br>
+                        	<h1>Menu</h1>
                             <div>
-                                <a href="calibrar" class="calibrar">Calibrar</a>
+                                <a href="calibragem.html" class="calibrar">Calibrar</a>
                             </div>
                             <br>
                             <div>
@@ -36,17 +36,17 @@
                             </div>
                             <br>
                             <div>
-                                <a href="configurações.html">Configurações</a>
+                                <a href="configuracoes.html">Configurações</a>
                             </div>
                             <br>
-                            <div>
-                                <a href="Instruções.html">Instruções</a>
+                             <div>
+                                <a href="sobre.html">Sobre</a>
                             </div>
                         </div>
                         </ul>
 </nav>
+</div>
 </header>
-
 <script src="https://code.jquery.com/jquery-3.0.0.js"></script>
 <script>
 			$(".btn-menu").click(function(){
@@ -58,7 +58,7 @@
 		});
 </script>
 <div class="div">
-<div class="close">comandos
+<div class="close"> <br> Comandos
 	<div class="lixo">
 		<img src="../imagens/lixeira.svg">
 	</div>
@@ -67,10 +67,11 @@
 <div class="audio" >
 		<img src="../imagens/audio.svg">
 	</div>
-	<div class="ajuda">
+	<a href="instrucoes.html"><div class="ajuda">
 		<img src="../imagens/ajuda.svg">
 	</div>
-	<div id="d1" class="play" onclick="document.getElementById('d1').onclick();">
+</a>
+	<div class="play" onclick="document.getElementById('d1').onclick();">
 		<img src="../imagens/play.svg">
 	</div>
 <div class="d">
