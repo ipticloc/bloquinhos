@@ -360,6 +360,57 @@ td{
         box-shadow: -11px 12px 0px 0px #2f2f2f;
         height: 100px;
         margin-left: 70px;
+}
+.b-green{
+        background:#00FFFF;
+        color: #00FFFF;
+        box-shadow: 0 5px 0 #006000;   
+        }
+.button-type {
+        background-color:#33cccc;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: left;
+        float: left; ;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        margin-left: 61%; 
+        }
+.tex{
+        line-height: 50px;
+        }
+.box{
+        width:600px;
+        height:450px;
+        background-color:white;
+        border-radius: 10px;
+        margin-top: 150px;
+    }
+.sb{
+        width: 490px;
+        height: 100px;
+        background-color: black;
+        color: white;
+        font-size: 75px;
+        border-radius: 5%;
+        font-style: Impact, fantasy;
+        font-weight: bold;
+        float: left;
+        border-top-right-radius: 0px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 17px; 
+        border-bottom-left-radius: 15px;
+        margin-left: 100px;
+        margin-top: 400px;
+        margin-top: -140px !important;
+        padding: 1px;
+        box-shadow: -11px 12px 0px 0px #2f2f2f;
+        height: 100px;
+        margin-left: 40px;
         width: 540px;
         border-top-left-radius: 23px;
         border-bottom-right-radius: 20px;
