@@ -34,8 +34,11 @@ select{
         height: 30px;
         background-color: #33cc66;
         margin-left:5px;
-        text-align: center;
+        text-align:center;
         color: #fff;
+        overflow: hidden;
+        background:no-repeat right #33cc66;
+        border: 1px solid #ccc;
     }
 .fiel{
         border-radius: 10%;
@@ -128,16 +131,12 @@ td{
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
-        margin-top: 45px;
-        text-align: center;
     }
 .close{
         width: 430px;
-        height: 103px;
+        height: 85px;
         position: relative;
-        top:0px;
-        background-color:black;
-        border-radius: 5px;
+        background-color:#000000;
         color: white;
         text-align: center;
         font-family: monospace;
@@ -146,7 +145,6 @@ td{
         border-top-left-radius: 10px;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
-        margin-top: 0px;
 
     }
 .botao{
@@ -173,6 +171,27 @@ td{
 }
 .cent-btn{
         margin-left: 40px !important;
+        background-color: #5cc;
+        border: none;
+        color: white;
+        padding: 5px 40px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 20px;
+        border:solid;
+        border-color: #5cc;
+        box-shadow:4px 4px 4px 4px #3cc;
+        font-weight: bold;
+        border-radius: 5px;
+        -moz-box-shadow: -5px 30px 1px 5px #33cccc;
+        box-shadow: -5px 5px 1px 5px #49b5b8;
+}
+button:active{
+    background-color: grey;
+}
+button:hover {
+        color: grey;
 }
 .d{
         padding: 2px;
@@ -253,12 +272,12 @@ td{
         color: white;
 }
 .circle{
-    border-radius:100%;
-    border:4px solid #ad3333;
-    width:45px;
-    height:45px;
-    background-color:#ff3333;
-    float: right;
+        border-radius:100%;
+        border:4px solid #ad3333;
+        width:45px;
+        height:45px;
+        background-color:#ff3333;
+        float: right;
 }
 .body
 {
@@ -269,10 +288,10 @@ h1{
         font-size: 40px;
 }
 .me{
-    display: block;
-    margin-top: 12px;
-    float: left;
-    margin-left: -25px;
+        display: block;
+        margin-top: 12px;
+        float: left;
+        margin-left: -25px;
 }
 .carrinho
 {
@@ -290,7 +309,7 @@ h1{
 .lixo{
         float: right;
         margin-right: 50px; 
-        margin-top: 410px; 
+        margin-top: 350px; 
 }
 .audio{
         float: right;
@@ -442,6 +461,112 @@ h1{
         border-bottom-right-radius: 20px;
 }
 .line{
-    float: left;
-    margin-left: 320px;
+        float: left;
+        margin-left: 320px;
+}
+ #img1{
+        background-color:#316cd7;
+        width:45px;
+        height:45px;
+        border-radius: 10px; 
+        border:solid -2px;
+        box-shadow: 2px 2px 2px 2px #142b56;
+  }
+#im1{
+        display: block;
+        margin: auto;
+}
+.svg{
+        margin-top: 6px;
+        transform: rotate(-90deg);
+}
+.img2{
+        margin-top: 6px;
+        transform: rotate(-180deg);
+}
+.img3{
+        margin-top: 6px;
+        transform: rotate(-360deg);
+}
+.ab{
+        margin-left: 5px;
+        margin-top: -0px;
+}
+.bc{
+        margin-left: 60px;
+        margin-top: -45px;
+
+}
+.cd{
+        margin-left: 115px;
+        margin-top: -45px;
+}
+.img4{
+        background-color: #e88520;
+        border-radius: 10px; 
+        width:45px;
+        height:45px;
+        border:solid -2px;
+        box-shadow: 2px 2px 2px 2px #8b5013;
+  }
+.de{
+        margin-left: 170px;
+        margin-top: -45px;
+}
+#img5{
+        background-color:#64368f;
+        border-radius: 10px; 
+        width:45px;
+        height:45px;
+        border:solid -2px;
+        box-shadow: 2px 2px 2px 2px #2e1942;
+}
+#im5{
+        display: block;
+        margin: auto;
+}   
+.ef{
+        margin-left: 225px;
+        margin-top: -45px;
+}
+#img6{
+        background-color:#8b2981;
+        border-radius: 10px; 
+        width:45px;
+        height:45px;
+        border:solid -2px;
+        box-shadow: 2px 2px 2px 2px #40133b;
+  }
+#im6{
+        display: block;
+        margin: auto;
+    }
+.fg{
+        margin-left: 277px;
+        margin-top: -45px;
+
+}
+.img6{
+        margin-top: 7px;
+}
+.gh{
+       margin-left:330px;
+       margin-top: -45px;
+    }
+#img8{
+        background-color:#1f468b;
+        border-radius: 10px; 
+        width:45px;
+        height:45px;
+        border:solid -2px;
+        box-shadow: 2px 2px 2px 2px #0e2040;
+  }
+#im8{
+      display: block;
+      margin: auto;
+}
+.hi{
+  
+       margin-left:380px;
+       margin-top: -45px;: 
 }
