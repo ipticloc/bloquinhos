@@ -17,7 +17,7 @@ button{
         border:solid;
         border-color: #5cc;
         box-shadow:4px 4px 4px 4px #3cc;
-        font-weight: bold;
+        font-weight: bold;                                                                                                        
         border-radius: 5px;
         -moz-box-shadow: -5px 30px 1px 5px #33cccc;
         box-shadow: -5px 5px 1px 5px #49b5b8;
@@ -188,7 +188,7 @@ td{
         box-shadow: -5px 5px 1px 5px #49b5b8;
 }
 button:active{
-    background-color: grey;
+        background-color: grey;
 }
 button:hover {
         color: grey;
@@ -315,6 +315,11 @@ h1{
         float: right;
         margin-right: -180px;
         margin-top: 663px; 
+}
+.audio2{
+        float: right;
+        margin-right: -180px;
+        margin-top: 620px; 
 }
 .ajuda{
         float: right;
@@ -488,6 +493,9 @@ h1{
         margin-top: 6px;
         transform: rotate(-360deg);
 }
+.top{
+    margin-top: 8px;
+}
 .ab{
         margin-left: 5px;
         margin-top: -0px;
@@ -501,7 +509,7 @@ h1{
         margin-left: 115px;
         margin-top: -45px;
 }
-.img4{
+#img4{
         background-color: #e88520;
         border-radius: 10px; 
         width:45px;

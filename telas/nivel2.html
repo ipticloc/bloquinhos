@@ -9,6 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../jquery/java.js"></script>
+	<script src="js/nivel2.js"></script>
 </head>
 <body class="body">
 <header>
@@ -47,50 +48,43 @@
 </nav>
 </div>
 </header>
-<script src="https://code.jquery.com/jquery-3.0.0.js"></script>
-<script>
-			$(".btn-menu").click(function(){
-			$(".menu").show();
-		});
-			$(".btn-close").click(function(){
-			$(".menu").hide();
-
-		});
-</script>
-<div class="div">
+<div class="div" ondrop="drop(event)" ondragover="allowDrop(event)">
 <div class="close">Comandos
-<div id="img1" class="ab">
-      <div id="im1" ><img class="svg" src="../imagens/img1.svg"></div>
+	<div>
+<div id="img1" class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+      <img class="svg" src="../imagens/img1.svg">
 </div>
-<div id="img1" class="bc">
-      <div id="im1"><img class="img2" src="../imagens/img1.svg"></div>
+<div id="img1" class="bc" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+     <img class="img2" src="../imagens/img1.svg" >
 </div>
-<div id="img1" class="cd">
-     <div id="im1"><img class="img3" src="../imagens/img1.svg"></div>
+<div id="img1" class="cd" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+<img class="img3" src="../imagens/img1.svg">
 </div>
-<div class="de">
- 	 <div class=img4><img class="img3" src="../imagens/voltar.svg"></div>
+<div id="img4"class="de" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+ <img class="top" src="../imagens/voltar.svg">
  </div>
-<div id="img5" class="ef">
-     <div id="im5"><img class="im5" src="../imagens/ss.svg"></div>
+<div id="img5" class="ef" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+ <img class="top"src="../imagens/sun.svg">
  </div>
-<div id="img6" class="fg">
-     <div id="im6"><img class="img6" src="../imagens/sextaimg.svg"></div>
+<div id="img6" class="fg" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+     <img class="top" src="../imagens/sextaimg.svg">
   </div>
- <div id="img6" class="gh">
-    <div id="im6"><img class="img6" src="../imagens/vv.svg"></div>
+ <div id="img6" class="gh" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+    <img class="top" src="../imagens/vv.svg">
  </div>
- <div id="img8" class="hi">
-    <div id="im8"><img class="img8" src="../imagens/seteimg.svg"></div>
+ <div id="img8" class="hi" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+    <img class="im8 " src="../imagens/seteimg.svg">
  </div>
+</div>
  <div>
      <div class="lixo"><img src="../imagens/lixeira.svg"></div>
  </div>
  </div>
+
  </div>
-<div class="audio">
-		<img src="../imagens/audio.svg">
-	</div>
+<div id="popup" class="audio">
+        <a href="audio" onclick="document.getElementById('popup').style.display='block';return false;" id="close_popup"><img src="../imagens/audio.svg"></a>
+</div>
 	<a href="sobre.html"><div class="ajuda">
 		<img src="../imagens/ajuda.svg">
 	</div>
