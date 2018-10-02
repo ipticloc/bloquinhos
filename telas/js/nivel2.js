@@ -28,7 +28,7 @@ function drag_drop(e){
  		appStatus("voce deixou o objeto"+e.target.getAttribute('id'));
  	}
  }
-
+  
  function allowDrop(ev) {
     ev.preventDefault();
 }
@@ -43,10 +43,8 @@ function drop(ev) {
     console.log(ev.dataTransfer);
     ev.target.appendChild(document.getElementById(data));
 }
-$(".btn-menu").click(function(){
-			$(".menu").show();
-		});
-			$(".btn-close").click(function(){
-			$(".menu").hide();
+var marl = "20px";
 
-		});
+function arrastar(){
+	document.getElementById('img1').style.margin-top= marl;
+}

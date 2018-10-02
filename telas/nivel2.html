@@ -9,7 +9,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../jquery/java.js"></script>
-	<script src="js/nivel2.js"></script>
+	<script type="text/javascript"src="../js/nivel2.js"></script>
 </head>
 <body class="body">
 <header>
@@ -19,6 +19,15 @@
 <div class="basico">Nivel basico</div>
 <div class="line">
 <nav class="menu"><a class="btn-close"><div class="circle">X</div></a>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+    $(".btn-menu").click(function(){
+        $(".menu").show();
+    });
+    $(".btn-close").click(function(){
+        $(".menu").hide();
+    });
+</script>
     <ul>
     <div >
                         <center>
