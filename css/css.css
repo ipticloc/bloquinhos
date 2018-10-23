@@ -122,12 +122,12 @@ td{
 .div{
         float: right;
         border-radius: 5%;
-        width: -10px;
-        height: 490px !important;
-        margin-right: 70px;
+        width: 430px;
+        height: 410px !important;
+        margin-right: -430px;
         position: relative;
         background-color:#ffffff;
-        margin-top: 50px;
+        margin-top: 130px;
         border-top-right-radius: 5px;
         border-top-left-radius: 5px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); 
@@ -145,15 +145,17 @@ td{
         border-top-left-radius: 10px;
         border-bottom-right-radius: 0px;
         border-bottom-left-radius: 0px;
-
+        float: right;
+        margin-top: 45px;
+        margin-right: 200px;
     }
 .botao{
         float: right;
         width: 10px;
     }            
 .menu {
-        width:30%;
-        height: 50%;
+        width:270px;
+        height: 350px;
         padding:10px 18px;
         box-shadow:0px 1px 1px rgba(0,0,0,0.15);
         border-radius:5px;
@@ -333,12 +335,38 @@ h1{
         height: 28px;
         color: black;
         background-color: white;
-        box-shadow: 0px 0px 2px 2px;
+        box-shadow: 0px 0px 1px 1px;
         border-radius: 5px;
-        margin-top: 228px;
+        margin-top: 230px;
         width: 110px;
         font-size: 20px;
 }
+.medio{
+        transform: rotate(-90deg);
+        float: left;
+        margin-left: -150px;
+        height: 28px;
+        color: black;
+        background-color: white;
+        box-shadow: 0px 0px 1px 1px;
+        border-radius: 5px;
+        margin-top: 260px;
+        width: 170px;
+        font-size: 20px;
+        }
+.avançado{
+        transform: rotate(-90deg);
+        float: left;
+        margin-left: -130px;
+        height: 28px;
+        color: black;
+        background-color: white;
+        box-shadow: 0px 0px 1px 1px;
+        border-radius: 5px;
+        margin-top: 240px;
+        width: 130px;
+        font-size: 20px;
+    }
 .btn{
         font-family: arial;
         font-size: 14px;
@@ -467,7 +495,7 @@ h1{
 }
 .line{
         float: left;
-        margin-left: 320px;
+        margin-left: 320px;  
 }
  #img1{
         background-color:#316cd7;
@@ -479,7 +507,7 @@ h1{
   }
 #im1{
         display: block;
-        margin: auto;
+        margin-top: auto;
 }
 .svg{
         margin-top: 6px;

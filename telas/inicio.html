@@ -31,10 +31,47 @@
                                 <label>Nível:</label>
                                 <select>
                             	  <option>Básico</option>
-                            	  <option>Médio</option>
+                            	  <option>Intermediario</option>
                             	  <option>Avançado</option>
                                 </select>
                             </div>
+                            <script type="text/javascript">
+                                function basico(b)
+                            window.location.href="basico.html";
+                              function medio(i)
+                            window.location.href="intermediario.html";
+                              function avançado(a)
+                            window.location.href="avançado.html";
+                              function redirect(id)
+                            if(redirect){
+                         return;
+                            }
+                            document.getElementById("btnCarregar").onclick = function() {
+    var combonivel = document.getElementById("cbonivel");
+
+    var opt1 = document.createElement("option");
+    opt1.value = "b";
+    opt1.text = "Básico";
+    combonivel.add(opt1, combonivel.options[1]);
+
+    var opt2 = document.createElement("option");
+    opt2.value = "i";
+    opt2.text = "intermediario";
+    combonivel.add(opt2, combonivel.options[2]);
+
+    var opt3 = document.createElement("option");
+    opt3.value = "a";
+    opt3.text = "avançado";
+    combonivel.add(opt3, combonivel.options[3]);
+    console.log(combonivel.selectedIndex);
+    
+    document.getElementById("btnInfo").onclick = function() {
+    var combonivel = document.getElementById("cbonivel");
+    console.log("O indice é: " + combonivel.selectedIndex);
+    console.log("O texto é: " + combonivel.options[combonivel.selectedIndex].text);
+    console.log("A chave é: " + combonivel.options[combonivel.selectedIndex].value);
+};
+                            </script>
                             <br>
                             <div>
                                 <a href="configuracoes.html">Configurações</a>
@@ -43,14 +80,13 @@
                             <div>
                                 <a href="Instruções.html">Instruções</a>
                             </div>
+                            <br>
                             <div>
                                 <a href="sobre.html">Sobre</a>
                             </div>
                         </div>
                         <br>
-                        <a href="nivel2.html">
-                        <div class="cent-btn">Começar</div>
-                        </a> 
+                            <button class="cent-btn" onclick="id">Começar</button>
                     </center>
                 </fieldset>
             </form>

@@ -2,19 +2,18 @@
 <html>
 <head>
 <meta charset="utf-8">
-	<title>Nivel</title>
+	<title>Nivel básico</title>
 	<script src="../block/blockly_compressed.js"></script>
 	<script src="../block/blocks_compressed.js"></script>
 	<script src="../block/msg/js/en.js"></script>
 	<link rel="stylesheet" type="text/css" href="../css/css.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="../jquery/java.js"></script>
-	<script type="text/javascript"src="../js/nivel2.js"></script>
 </head>
 <body class="body">
 <header>
 <div>
-<button class="btn-menu" class="but"><img src="../imagens/menu.svg" class="me">menu</button>
+<button class="btn-menu"><img src="../imagens/menu.svg" class="me">menu</button>
 </div>
 <div class="basico">Nivel Básico</div>
 <div class="line">
@@ -57,14 +56,12 @@
 </nav>
 </div>
 </header>
-<div class="div" ondrop="drop(event)" ondragover="allowDrop(event)">
 <div class="close">Comandos
-	<div>
-<div id="img1" class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-      <img class="svg" src="../imagens/img1.svg">
+	<div id="img1" class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+       <img class="svg" src="../imagens/img1.svg">
 </div>
-<div id="img1" class="bc" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-     <img class="img2" src="../imagens/img1.svg" >
+    <div id="img1" class="bc" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+       <img class="img2" src="../imagens/img1.svg" >
 </div>
 <div id="img1" class="cd" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
 <img class="img3" src="../imagens/img1.svg">
@@ -85,27 +82,30 @@
     <img class="im8 " src="../imagens/seteimg.svg">
  </div>
 </div>
+<div class="div" ondrop="drop(event)" ondragover="allowDrop(event)">
   <script type="text/javascript">
- function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    console.log(ev.dataTransfer);
-    ev.target.appendChild(document.getElementById(data));
-}
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var nodeCopy = document.getElementById(data).cloneNode(true);
+                nodeCopy.id = "newId";
+                ev.target.appendChild(nodeCopy);
+            }
+            function del(ev)
+            {
+                ev.preventDefault();
+                var data= ev.dataTransfer.getData("Text");
+                var ev = document.getElementById(data);
+                ev.parentNode.removeChild(ev);
+            }
 </script>
- <div>
-     <div class="lixo"><img src="../imagens/lixeira.svg"></div>
- </div>
- </div>
-
+ 	 <div id="delete" class="lixo" ondrop="del(event)" ondragover="allowDrop(event)"><img src="../imagens/lixeira.svg"></div>
  </div>
 <div id="popup" class="audio">
         <a href="audio" onclick="document.getElementById('popup').style.display='block';return false;" id="close_popup"><img src="../imagens/audio.svg"></a>
@@ -114,9 +114,17 @@ function drop(ev) {
 		<img src="../imagens/ajuda.svg">
 	</div>
 </a>
+<a href="reiniciar.html">
 	<div class="play" onclick="document.getElementById('d1').onclick();">
 		<img src="../imagens/play.svg">
 	</div>
+	</a>
+	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+    $(".").click(function(){
+        $(".reiniciar.html").show();
+    });
+</script>
 <div class="d">
                     <div class="e">synapse</div>
                     <div class="f">BOT</div>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Foodye | Mesas</title>
+        <link href="estilo.css" rel="stylesheet" type="text/css"/>
+        <style>
+             
+            #div2 {width:500px;height:200px;padding:10px;border:1px solid #aaaaaa;}
+        </style>
+        <script>
+            function allowDrop(ev) {
+                ev.preventDefault();
+            }
+ 
+            function drag(ev) {
+                ev.dataTransfer.setData("text", ev.target.id);
+            }
+ 
+            function drop(ev) {
+                ev.preventDefault();
+                var data = ev.dataTransfer.getData("text");
+                var nodeCopy = document.getElementById(data).cloneNode(true);
+                nodeCopy.id = "newId";
+                ev.target.appendChild(nodeCopy);
+            }
+             
+            function del(ev)
+            {
+                ev.preventDefault();
+                var data= ev.dataTransfer.getData("Text");
+                var ev = document.getElementById(data);
+                ev.parentNode.removeChild(ev);
+            }
+        </script>
+    </head>
+    <body>
+            <div id="header" class="container">
+                <div id="logo">
+                    <h1><a href="Index.php">FOODYE</a></h1>
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li><a href="index.php" >HOME</a></li>
+                        <li><a href="restaurantes.php" >RESTAURANTES</a></li>
+                        <li><a href="contato.php" >CONTATO</a></li>
+                        <li> <a href="php/logout.php"> SAIR </a></li>
+                    </ul>
+                </div>
+            </div>
+             
+        <div id="corpo">
+            <div id="perfil">
+                <div id="objetos" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <img id="drag1" class="mesa" src=" images/mesa.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+                </div>
+                <div id="restaurante" >
+                    <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                     
+ 
+                    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                     
+ 
+                    <div id="delete" ondrop="del(event)" ondragover="allowDrop(event)"><h3>Deletar</h3> </div>
+                </div>
+                 
+                 
+            </div>
+        </div>
+        <div id="rodape" class="container">
+            <p>© FOODYE. TODOS OS DIREITOS RESERVADOS</p>
+        </div>
+    </body>
+</html>
