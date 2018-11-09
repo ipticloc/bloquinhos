@@ -49,13 +49,13 @@
      </div>
 </header>
 <div class="close">Comandos
-    <div id="img1" class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-       <img class="svg" src="../imagens/img1.svg"></div>
-    <div id="img1" class="bc" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-       <img class="img2" src="../imagens/img1.svg" ></div>
-    <div id="img1" class="cd" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-       <img class="img3" src="../imagens/img1.svg"></div>
-    <div id="img4"class="de" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+    <div class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="svg" src="../imagens/seta.svg"></div>
+    <div class="bc" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+       <img width="50" height="50" src="../imagens/seta.svg" ></div>
+    <div class="cd" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
+       <img width="50" height="50" src="../imagens/seta.svg"></div>
+    <div id="img4" class="de" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
        <img class="top" src="../imagens/voltar.svg"></div>
     <div id="img5" class="ef" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
        <img class="top"src="../imagens/sun.svg"></div>
@@ -75,14 +75,12 @@
                 ev.dataTransfer.setData("text", ev.target.id);
             }
             function drop(ev) {
-                ev.preventDefault();
-                var data = ev.dataTransfer.getData("text");
-                var nodeCopy = document.getElementById(data).cloneNode(true);
-                nodeCopy.id = "newId";
-                ev.target.appendChild(nodeCopy);
+               ev.preventDefault();
+              var data = ev.dataTransfer.getData("text");
+               console.log(ev.dataTransfer);
+               ev.target.appendChild(document.getElementById(data));
             }
-            function del(ev)
-            {
+            function del(ev){
                 ev.preventDefault();
                 var data= ev.dataTransfer.getData("Text");
                 var ev = document.getElementById(data);
@@ -91,16 +89,16 @@
     </script>
         <div id="delete" class="lixo" ondrop="del(event)" ondragover="allowDrop(event)"><img src="../imagens/lixeira.svg"></div>
 </div>
-<div id="popup" class="audio"><a href="audio" onclick="document.getElementById('popup').style.display='block';return false;" id="close_popup"><img src="../imagens/audio.svg"></a></div>
+    <input type="checkbox" id="hide"> 
+    <label for="hide" id="a">
+    <img width="50px" height="50px" class="audio" src="../imagens/som.svg">	
+    </label>
+    <label for="hide" id="b">
+    	<img width="50px" height="50px" class="audio"src="../imagens/som2.svg">
+    </label>          
 	<a href="sobre.html" class="ajuda"><img src="../imagens/ajuda.svg"></a>
 	<nav>
     <img src="../imagens/play.svg" class="play">
-	<script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script>
-       $(".play").click(function(){
-       $(".reiniciar.html").show();
-       });
-    </script>
     </nav>
     <div class="d">
         <div class="e">synapse</div>

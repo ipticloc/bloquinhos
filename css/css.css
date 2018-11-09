@@ -318,10 +318,20 @@ h1{
         margin-right: -180px;
         margin-top: 663px; 
 }
-.audio2{
-        float: right;
-        margin-right: -180px;
-        margin-top: 620px; 
+label#{
+    display: none;
+}
+label#b{
+    display: block;
+}
+input[type=checkbox]:checked ~ label#a{
+    display: block;
+}
+input[type=checkbox]:checked ~ label#b{
+    display: none;
+}
+input[type=checkbox]{
+    display: none;
 }
 .ajuda{
         float: right;
@@ -522,20 +532,23 @@ h1{
         transform: rotate(-360deg);
 }
 .top{
-    margin-top: 8px;
+        margin-top: 8px;
 }
 .ab{
-        margin-left: 5px;
-        margin-top: -0px;
+        margin-left: -368px;
+        margin-top: 0px;
+        display: block;
+        margin-top: auto;
 }
 .bc{
-        margin-left: 60px;
-        margin-top: -45px;
-
+        margin-left: -260px;
+        margin-top: -60px;
+        transform: rotate(-90deg);
 }
 .cd{
-        margin-left: 115px;
-        margin-top: -45px;
+        margin-left: -165px;
+        margin-top: -55px;
+        transform: rotate(90deg);
 }
 #img4{
         background-color: #e88520;
@@ -598,11 +611,16 @@ h1{
         box-shadow: 2px 2px 2px 2px #0e2040;
   }
 #im8{
-      display: block;
-      margin: auto;
+       display: block;
+       margin: auto;
 }
 .hi{
   
        margin-left:380px;
        margin-top: -45px;: 
+}
+
+.div #img1{
+       width: 250px;
+       float: left;
 }

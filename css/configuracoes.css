@@ -1,9 +1,9 @@
 a{
-            font-size: 27px;
-            text-align: center;
-            text-decoration: none;
-            color: black;
-            font-family: monospace;
+        font-size: 27px;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        font-family: monospace;
     }
 button{
         background-color: #5cc;
@@ -47,10 +47,9 @@ select{
         border:none;
         float: left;
         margin-left: 540px;
-
     }
 .cor {
-    background: #393939;
+        background: #393939;
 }
 label{
         font-size: 30px;
