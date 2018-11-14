@@ -51,24 +51,32 @@
      </div>
 </header>
 <div class="close">Comandos
-    <div class="ab" draggable="true" ondragstart="drag(event)" id="drag1" ondragover="allowDrop(event)">
-       <img width="50" height="50" class="svg command btn-left" src="../imagens/seta.svg"  id="btn-left-default"></div>
+    <div class="ab" draggable="true" ondragstart="drag(event)" id="drag1" onclick="marcar(this)" ondragover="allowDrop(event)">
+       <img width="50" height="50" onclick="mudaImagem(1)" id="imagem1" class="command btn-left" src="../imagens/seta.svg" id="btn-left-default">
+   </div>
     <div class="bc" draggable="true" ondragstart="drag(event)" id="drag2" ondragover="allowDrop(event)">
-       <img width="50" height="50" class="svg command btn-right" src="../imagens/seta.svg" id="btn-right-default"></div>
+       <img width="50" height="50" class="command btn-right" src="../imagens/left.svg" id="btn-right-default">
+   </div>
     <div class="cd" draggable="true" ondragstart="drag(event)" id="drag3" ondragover="allowDrop(event)">
-       <img width="50" height="50" src="../imagens/seta.svg"></div>
-    <div id="img4" class="de" draggable="true" ondragstart="drag(event)" id="drag4" ondragover="allowDrop(event)">
-       <img class="top" src="../imagens/voltar.svg"></div>
-    <div id="img5" class="ef" draggable="true" ondragstart="drag(event)" id="drag5" ondragover="allowDrop(event)">
-       <img class="top"src="../imagens/sun.svg"></div>
-    <div id="img6" class="fg" draggable="true" ondragstart="drag(event)" id="drag6" ondragover="allowDrop(event)">
-       <img class="top" src="../imagens/sextaimg.svg"></div>
-    <div id="img6" class="gh" draggable="true" ondragstart="drag(event)" id="drag7" ondragover="allowDrop(event)">
-       <img class="top" src="../imagens/vv.svg"></div>
-    <div id="img8" class="hi" draggable="true" ondragstart="drag(event)" id="drag8" ondragover="allowDrop(event)">
-       <img class="im8 " src="../imagens/seteimg.svg"></div>
+       <img width="50" height="50" class="command btn-center" src="../imagens/right.svg" id="btn-center-default">
+   </div>
+    <div class="de" draggable="true" ondragstart="drag(event)" id="drag4" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="command btn-back" src="../imagens/back.svg" id="btn-back-default">
+   </div>
+    <div class="ef" draggable="true" ondragstart="drag(event)" id="drag5" ondragover="allowDrop(event)">
+       <img width="50" height="50"class="command btn-led" src="../imagens/led.svg"  id="btn-led-default" >
+   </div>
+    <div class="fg" draggable="true" ondragstart="drag(event)" id="drag6" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="command btn-audio" src="../imagens/audio3.svg" id="btn-audio-default">
+   </div>
+    <div class="gh" draggable="true" ondragstart="drag(event)" id="drag7" ondragover="allowDrop(event)">
+       <img width="50" height="50"class="command btn-sirene" src="../imagens/sirene.svg"   id="btn-sirene-default">
+   </div>
+    <div class="hi" draggable="true" ondragstart="drag(event)" id="drag8" ondragover="allowDrop(event)">
+       <img width="50" height="50"class=" command btn-quadro" src="../imagens/quadro.svg" id="btn-quadro-default">
+   </div>
 </div>
-<div class="div drop-box" ondrop="drop(event)" ondragover="allowDrop(event)">
+<div class="div drop-box" ondrop="drop(event)" id ="imagem2"ondragover="allowDrop(event)">
     <script type="text/javascript">
             function allowDrop(ev) {
                 ev.preventDefault();
@@ -78,12 +86,12 @@
             }
             function drop(ev) {
                ev.preventDefault();
-               var data = ev.dataTransfer.getData("text");
+                    var data = ev.dataTransfer.getData("text");
                console.log(ev.dataTransfer);
-							 var element = $("#"+data);
-							 var clone = element.clone();
+					var element = $("#"+data);
+					var clone = element.clone();
 							 
-						 	 element.closest("div").append(clone);
+				        element.closest("div").append(clone);
 							// $()
 							 /*
 							 var btnLefts = $(".btn-left");
@@ -91,24 +99,26 @@
 							 clone.attr("data-position", );
 							 ev.target.appendChild(document.getElementById(data));
 */
-						 element.css("display", "block");
-						 var elementClasses = element.attr("class");
-						 var countPosition = $(".drop-box").find(".command").length;
-						 var countElementsClonned = $(".drop-box").find(".command[class='"+elementClasses+"']").length + 1;
-						 var idSplited = element.attr("id").split("-");
-						 var newID = idSplited[0]+"-"+idSplited[1]+"-"+countElementsClonned;
-						 element.attr("data-position", countPosition + 1 );
-						 element.attr("id", newID);
-						 $(ev.target).append(element);
+				        element.css("display", "block");
+					var elementClasses = element.attr("class");
+					var countPosition = $(".drop-box").find(".command").length;
+					var countElementsClonned = $(".drop-box").find(".command[class='"+elementClasses+"']").length + 1;
+					var idSplited = element.attr("id").split("-");
+					var newID = idSplited[0]+"-"+idSplited[1]+"-"+countElementsClonned;
+						element.attr("data-position", countPosition + 1 );
+						element.attr("id", newID);
+						$(ev.target).append(element);
             }
             function del(ev){
                 ev.preventDefault();
-                var data= ev.dataTransfer.getData("Text");
+                var data= ev.dataTransfer.getData("text");
                 var ev = document.getElementById(data);
                 ev.parentNode.removeChild(ev);
             }
+
     </script>
-        <div id="delete" class="lixo" ondrop="del(event)" ondragover="allowDrop(event)"><img src="../imagens/lixeira.svg"></div>
+       <div id="delete" class="lixo" ondrop="del(event)" ondragover="allowDrop(event)">
+       	<img src="../imagens/lixeira.svg"></div>
 </div>
     <input type="checkbox" id="hide">
     <label for="hide" id="a">
