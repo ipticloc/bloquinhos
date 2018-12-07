@@ -12,11 +12,9 @@
             function allowDrop(ev) {
                 ev.preventDefault();
             }
- 
             function drag(ev) {
                 ev.dataTransfer.setData("text", ev.target.id);
             }
- 
             function drop(ev) {
                 ev.preventDefault();
                 var data = ev.dataTransfer.getData("text");
@@ -52,14 +50,13 @@
         <div id="corpo">
             <div id="perfil">
                 <div id="objetos" ondrop="drop(event)" ondragover="allowDrop(event)">
-                    <img id="drag1" class="mesa" src=" images/mesa.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
+            <img id="drag1" class="mesa" src=" images/mesa.png" draggable="true" ondragstart="drag(event)" width="50" height="50">
                 </div>
                 <div id="restaurante" >
                     <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
                      
  
-                    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-                     
+                    <div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div
  
                     <div id="delete" ondrop="del(event)" ondragover="allowDrop(event)"><h3>Deletar</h3> </div>
                 </div>

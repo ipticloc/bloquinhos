@@ -1,0 +1,38 @@
+body{
+
+	background-color: #ccc;
+}
+
+li{
+	display: inline-block;
+	margin: 2px;
+	padding: 4px;
+	background:cyan;
+}
+p{
+	font-size: 10pt;
+	color:white;
+}
+#icon{
+		display:none;
+		cursor: pointer;
+	}
+@media only screen and (max-width: 400px){
+	body{
+		background-color:black;
+		font-size: 18pt;
+	}
+	p{
+		color: red;
+	}
+	li{
+		display: none;
+	}
+	#icon{
+		display:block;
+		cursor: pointer;
+	}
+}
+div#ta:checked ~ ul#icon{
+	display: none;
+}

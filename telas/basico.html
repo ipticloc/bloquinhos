@@ -51,28 +51,28 @@
      </div>
 </header>
 <div class="close">Comandos
-    <div class="ab" draggable="true" ondragstart="drag(event)" id="drag1" onclick="marcar(this)" ondragover="allowDrop(event)">
-       <img width="50" height="50" onclick="mudaImagem(1)" id="imagem1" class="command btn-left" src="../imagens/seta.svg" id="btn-left-default">
+    <div class="ab" draggable="true" ondragstart="dragDefault(event)" id="drag1" onclick="marcar(this)" ondragover="allowDrop(event)">
+     <img width="50" height="50" onclick="mudaImagem(1)" id="btn-pass-default" class="command btn-pass" src="../imagens/seta.svg" id="btn-pass-default">
    </div>
-    <div class="bc" draggable="true" ondragstart="drag(event)" id="drag2" ondragover="allowDrop(event)">
-       <img width="50" height="50" class="command btn-right" src="../imagens/left.svg" id="btn-right-default">
+    <div class="bc" draggable="true" ondragstart="dragDefault(event)" id="drag2" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="command btn-left" src="../imagens/left.svg" id="btn-left-default">
    </div>
-    <div class="cd" draggable="true" ondragstart="drag(event)" id="drag3" ondragover="allowDrop(event)">
-       <img width="50" height="50" class="command btn-center" src="../imagens/right.svg" id="btn-center-default">
+    <div class="cd" draggable="true" ondragstart="dragDefault(event)" id="drag3" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="command btn-right" src="../imagens/right.svg" id="btn-right-default">
    </div>
-    <div class="de" draggable="true" ondragstart="drag(event)" id="drag4" ondragover="allowDrop(event)">
-       <img width="50" height="50" class="command btn-back" src="../imagens/back.svg" id="btn-back-default">
+    <div class="de" draggable="true" ondragstart="dragDefault(event)" id="drag4" ondragover="allowDrop(event)">
+       <img width="50" height="50" class="command btn-rotate" src="../imagens/back.svg" id="btn-rotate-default">
    </div>
-    <div class="ef" draggable="true" ondragstart="drag(event)" id="drag5" ondragover="allowDrop(event)">
+    <div class="ef" draggable="true" ondragstart="dragDefault(event)" id="drag5" ondragover="allowDrop(event)">
        <img width="50" height="50"class="command btn-led" src="../imagens/led.svg"  id="btn-led-default" >
    </div>
-    <div class="fg" draggable="true" ondragstart="drag(event)" id="drag6" ondragover="allowDrop(event)">
+    <div class="fg" draggable="true" ondragstart="dragDefault(event)" id="drag6" ondragover="allowDrop(event)">
        <img width="50" height="50" class="command btn-audio" src="../imagens/audio3.svg" id="btn-audio-default">
    </div>
-    <div class="gh" draggable="true" ondragstart="drag(event)" id="drag7" ondragover="allowDrop(event)">
+    <div class="gh" draggable="true" ondragstart="dragDefault(event)" id="drag7" ondragover="allowDrop(event)">
        <img width="50" height="50"class="command btn-sirene" src="../imagens/sirene.svg"   id="btn-sirene-default">
    </div>
-    <div class="hi" draggable="true" ondragstart="drag(event)" id="drag8" ondragover="allowDrop(event)">
+    <div class="hi" draggable="true" ondragstart="dragDefault(event)" id="drag8" ondragover="allowDrop(event)">
        <img width="50" height="50"class=" command btn-quadro" src="../imagens/quadro.svg" id="btn-quadro-default">
    </div>
 </div>
@@ -81,43 +81,72 @@
             function allowDrop(ev) {
                 ev.preventDefault();
             }
-            function drag(ev) {
-                ev.dataTransfer.setData("text", ev.target.id);
+            function dragDefault(ev) {
+                ev.dataTransfer.setData("drag", "default");
+                ev.dataTransfer.setData("drag-id", ev.target.id);
+            }
+            function dragCopy(ev) {
+                ev.dataTransfer.setData("drag", "copy");
+                ev.dataTransfer.setData("drag-id", ev.target.id);
             }
             function drop(ev) {
-               ev.preventDefault();
-                    var data = ev.dataTransfer.getData("text");
-               console.log(ev.dataTransfer);
-					var element = $("#"+data);
-					var clone = element.clone();
-							 
-				        element.closest("div").append(clone);
-							// $()
-							 /*
-							 var btnLefts = $(".btn-left");
-							 //clone.attr("id", "btn-left"+)
-							 clone.attr("data-position", );
-							 ev.target.appendChild(document.getElementById(data));
-*/
-				        element.css("display", "block");
-					var elementClasses = element.attr("class");
-					var countPosition = $(".drop-box").find(".command").length;
-					var countElementsClonned = $(".drop-box").find(".command[class='"+elementClasses+"']").length + 1;
-					var idSplited = element.attr("id").split("-");
-					var newID = idSplited[0]+"-"+idSplited[1]+"-"+countElementsClonned;
-						element.attr("data-position", countPosition + 1 );
-						element.attr("id", newID);
-						$(ev.target).append(element);
-            }
-            function del(ev){
-                ev.preventDefault();
-                var data= ev.dataTransfer.getData("text");
-                var ev = document.getElementById(data);
-                ev.parentNode.removeChild(ev);
+                   ev.preventDefault();
+                   var dragType = ev.dataTransfer.getData("drag");
+                   var id = ev.dataTransfer.getData("drag-id");
+                   if(dragType == "default") {
+              					var element = $("#"+id);
+              					var clone = element.clone();
+
+
+                          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+              				  element.closest("div").append(clone);
+              							// $()
+              							 /*
+              							 var btnLefts = $(".btn-left");
+              							 //clone.attr("id", "btn-left"+)
+              							 clone.attr("data-position", );
+              							 ev.target.appendChild(document.getElementById(data));
+              */
+              				  element.css("display", "block");
+              					var elementClasses = element.attr("class");
+              					var countPosition = $(".drop-box").find(".command").length;
+              					var countElementsClonned = $(".drop-box").find(".command[class='"+elementClasses+"']").length + 1;
+              					var idSplited = element.attr("id").split("-");
+              					var newID = idSplited[0]+"-"+idSplited[1]+"-"+countElementsClonned;
+            						element.attr("data-position", countPosition + 1 );
+            						element.attr("id", newID);
+                        element.attr("ondragstart", "dragCopy(event)");
+            						$(ev.target).append(element);
+                    }
+                  }
+                  function del(ev){
+                    ev.preventDefault();
+                    ev.stopImmediatePropagation();
+                     var dragType = ev.dataTransfer.getData("drag");
+                     var id = ev.dataTransfer.getData("drag-id");
+                     if(dragType == "copy") {
+                        var ev = document.getElementById(id);
+                        ev.parentNode.removeChild(ev);
+                      }
             }
 
     </script>
-       <div id="delete" class="lixo" ondrop="del(event)" ondragover="allowDrop(event)">
+       <div id="delete" class="lixo" ondrop="del(event)">
        	<img src="../imagens/lixeira.svg"></div>
 </div>
     <input type="checkbox" id="hide">
